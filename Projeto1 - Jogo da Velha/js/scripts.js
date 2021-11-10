@@ -251,7 +251,6 @@ function computerPlay() {
     for(let i=0; i < boxes.length; i++) {
 
         let randomNumber = Math.floor(Math.random() * 5);
-        debugger;
         //só preencher se estiver vazio o filho
         if(boxes[i].childNodes[0] == undefined) {
             if(randomNumber <= 1) {
@@ -259,9 +258,9 @@ function computerPlay() {
                 counter++;
                 break;
             //checagem de quantas estão preenchidas
-            } else {
-                filled++;
             }
+        } else {
+            filled++;
         }
     }
 
