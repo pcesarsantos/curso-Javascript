@@ -1,10 +1,16 @@
 const express = require('express');
+const { reset } = require('nodemon');
 const router  =  express.Router();
 const Job     = require('../models/Job');
 
 //route geet
 router.get('/test',(req,res) => {
     res.send('deu certo');
+});
+
+//get
+router.get('/add',(req,res) => {
+    res.render('add');
 });
 
 //add job via post
